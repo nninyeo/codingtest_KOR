@@ -12,6 +12,7 @@ import {
 
 import Home from "./Pages/Home";
 import BeerList from "./Pages/BeerList";
+import Cart from "./Pages/Cart";
 // import ReactGA from "react-ga";
 
 const Routes = () => {
@@ -23,6 +24,7 @@ const Routes = () => {
        </Route>
         <Route path="/home" component={Home} />
         <Route path="/beerList" component={BeerList} />
+        <Route path="/cart" component={Cart} />
     </Router>
   );
 };

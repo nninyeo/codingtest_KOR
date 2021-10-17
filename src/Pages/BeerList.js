@@ -6,17 +6,30 @@ import ArrowDownward from "@material-ui/icons/ArrowDownward";
 import ReactDOM from 'react-dom'
 import MaterialTable from 'material-table'
 import { Link } from 'react-router-dom';
+import { Checkbox, Divider } from 'antd';
+
+
+function onChange(e) {
+  console.log(`checked = ${e.target.checked}`);
+}
+ReactDOM.render(<Checkbox onChange={onChange}>Checkbox</Checkbox>, mountNode);
 
 const BeerList = () => {
   return (
     <div>
     <Link to="/Home">홈으로</Link>
+    <br/>
+    <Link to="/cart">카트</Link>
+    <br/>
+
+
      <div style={{ maxWidth: '100%'}}>
         
      <MaterialTable
       title="Beer List"
       options={{
-          paging: false
+          paging: false,
+          search: false,
         }}
       columns={[
         { title: '번호', field: 'id' },
@@ -64,5 +77,4 @@ const BeerList = () => {
     </div>
   )
 }
-
 export default BeerList

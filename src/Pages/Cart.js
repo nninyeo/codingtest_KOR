@@ -3,14 +3,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Cart = () => {
   return (
     <div>
-      <Link to="/beerList">술 목록</Link>
+      <Link to="/home">홈으로</Link>
       <br/>
-      <Link to="/cart">카트</Link>
+      <Link to="/beerList">술 목록</Link>
     </div>
   )
 }
 
-export default Home
+export default Cart
